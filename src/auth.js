@@ -4,10 +4,13 @@ export const PRIVATE_KEY = "15fcea10-fd1b-418e-8f4b-5268ee5787bd";
 
 export function authenticateToken(req, res, next) {
   const authHeader = req.header("Authorization");
+  let mensagem = "Não autorizado";
+
+  /* Validação do token (header) - Error 401 | Unauthorized */
+  if (!authHeader) return res.status(401).json({ mensagem });
   const token = authHeader.split(" ")[1];
 
   /* Validação do token (não existe) - Error 401 | Unauthorized */
-  let mensagem = "Não autorizado";
   if (!token) return res.status(401).json({ mensagem });
 
   try {

@@ -126,6 +126,12 @@ const generateToken = (uuid, userID, expiresIn = "30m") => {
 }
 
 describe("GET /user", () => {
+  it("should respond with status 401 when token is not provided", async () => {
+    const res = await server.get("/user");
+    expect(res.status).toBe(401);
+    expect(res.body.mensagem).toBe("Não autorizado");
+  });
+
   it("should respond with status 401 when token is not valid", async () => {
     const token = faker.lorem.word();
     const res = await server.get("/user").set("Authorization", `Bearer ${token}`);
