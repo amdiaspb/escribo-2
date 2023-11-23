@@ -33,9 +33,9 @@ autenticação (sign in) e recuperação de informações do usuário.
 - Para iniciar a suíte de testes use `npm run test`.
 
 ***Alternativa:** Com alguma ferramenta que realize requisições HTTP, você também pode testar os endpoints no link de deploy abaixo.   
-**Deploy:** https://estest-api-w1n4.onrender.com*
+**Deploy:** https://escribo-2-api.onrender.com*
 
-*Obs: Como é um deploy gratuito, a permanência dos dados na sessão não pode ser garantida. A aplicação é regularmente reiniciada e os dados resetados. Para melhor experiência siga os passos acima.*
+*Obs: Como é um deploy gratuito, a execução é lenta e a permanência dos dados na sessão não pode ser garantida. A aplicação é regularmente reiniciada e os dados resetados. Para melhor experiência siga os passos acima.*
 
 ## Endpoints
 
